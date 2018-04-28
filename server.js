@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/nodeappdatabase', {
-  useMongoClient: true
-});
+mongoose.connect(
+  'mongodb://admin:strongPassword@ds261969.mlab.com:61969/nodeappdatabase',
+  {
+    useMongoClient: true
+  }
+);
 
 const userSchema = new Schema({
   name: String,
